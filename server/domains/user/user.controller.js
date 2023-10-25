@@ -1,22 +1,22 @@
 // Actions methods
-// GET "/user/login"
+
+// GET '/user/login'
 const login = (req, res) => {
-  res.send('NEVER USED');
+  res.send("🚧 UNDER CONSTRUCTION '/user/login' 🚧");
 };
 
-// GET "/user/logout"
+// GET '/user/logout'
 const logout = (req, res) => {
-  res.send('NEVER USED');
+  res.send("🚧 UNDER CONSTRUCTION '/user/logout' 🚧");
 };
 
-// GET "/user/register"
+// GET '/user/register'
 const register = (req, res) => {
-  res.send('NEVER USED');
+  res.send("🚧 UNDER CONSTRUCTION '/user/register' 🚧");
 };
 
-// Controlador user
+// Controlador Home
 export default {
-  // Action Methods
   login,
   logout,
   register,

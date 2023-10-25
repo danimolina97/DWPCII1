@@ -1,17 +1,16 @@
 // Actions methods
-// GET "/project"
-const showDashboard = (req, res) => {
-  res.send('req is defined but never used');
+
+// GET '/user/project/["projects", "dashboard"]'
+const projects = (req, res) => {
+  res.send("🚧 UNDER CONSTRUCTION '/user/project/[projects o dashboard]' 🚧");
 };
 
-// GET "/project/add"
-const add = (req, res) => {
-  res.send('req is defined but never used');
+const forms = (req, res) => {
+  res.send("🚧 UNDER CONSTRUCTION '/user/project/[add-form o add]' 🚧");
 };
 
-// Controlador user
+// Controlador Home
 export default {
-  // Action Methods
-  showDashboard,
-  add,
+  projects,
+  forms,
 };
