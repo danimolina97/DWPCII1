@@ -9,12 +9,12 @@ console.log(process.env.PORT);
 
 // Creando objetos de configuración
 const defaultConfig = {
-  PORT: process.env.PORT || 3500,
+  PORT: process.env.PORT || 3000,
   IP: process.env.IP || '0.0.0.0',
 };
 
 const devConfig = {
-  DEV_VALUE: 100,
+  MONGO_URL: process.env.DEV_DATABASE_URL,
 };
 
 const testConfig = {
@@ -22,7 +22,7 @@ const testConfig = {
 };
 
 const prodConfig = {
-  PROD_VALUE: 300,
+  MONGO_URL: process.env.PROD_DATABASE_URL,
 };
 
 // Creando una función selectora

@@ -6,9 +6,16 @@
 
 import http from 'http';
 import app from '../app';
+
 import debug from '../services/debugLogger';
 // Importing winston logger
 import log from '../config/winston';
+
+// Importing configuration keys
+import configKeys from '../config/configKeys';
+
+// Importing db connection function
+import connectWithRetry from '../database/mongooseConnection';
 
 /**
  * Create HTTP server.
@@ -42,7 +49,7 @@ function normalizePort(val) {
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3500');
+const port = normalizePort(configKeys.PORT);
 app.set('port', port);
 
 /**
@@ -87,6 +94,9 @@ function onListening() {
 // documentación de express
 
 // debug.enabled = true;
+
+// Launching db connection
+connectWithRetry(configKeys.MONGO_URL);
 
 /**
  * Listen on provided port, on all network interfaces.
