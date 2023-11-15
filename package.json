@@ -22,7 +22,7 @@
   "version": "1.0.0",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node ./dist/bin/www",
     "dev": "NODE_ENV=development DEBUG=dwpcii:server babel-watch ./server/bin/www",
     "devc": "NODE_ENV=development webpack serve --config ./webpack.dev.config.js --mode development",
     "devb": "DEBUG=dwpcii1:server && babel-watch ./server/bin/www",
