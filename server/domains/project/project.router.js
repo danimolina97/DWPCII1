@@ -3,21 +3,20 @@ import { Router } from 'express';
 
 // Importando el controlador
 import projectController from './project.controller';
-
 // Importando factory de validación
 import ValidateFactory from '../../services/validateFactory';
 // Importando el validador de proyectos
 import projectValidator from './project.validator';
 
-// Creando una isntancia del enrutador
+// Creando una instancia del enrutador
 const router = new Router();
 
 // Enrutamos
-// GET "/project"
-router.get('/', projectController.showDashboard);
+// GET '/user/["projects", "dashboard"]
+router.get(['/', '/projects', '/dashboard'], projectController.showdasboard);
 
-// GET "/project/add"
-router.get('/add', projectController.add);
+// GET '/user/project/["add-form", "add"]
+router.get(['/add-form', '/add'], projectController.add);
 
 // POST "/project/add"
 router.post(

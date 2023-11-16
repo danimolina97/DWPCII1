@@ -18,7 +18,7 @@ const devConfig = {
 };
 
 const testConfig = {
-  TEST_VALUE: 200,
+  TESY_VALUE: 200,
 };
 
 const prodConfig = {
