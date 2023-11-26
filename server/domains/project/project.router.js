@@ -13,7 +13,7 @@ const router = new Router();
 
 // Enrutamos
 // GET '/user/["projects", "dashboard"]
-router.get(['/', '/projects', '/dashboard'], projectController.showdasboard);
+router.get(['/', '/projects', '/dashboard'], projectController.showdashboard);
 
 // GET '/user/project/["add-form", "add"]
 router.get(['/add-form', '/add'], projectController.add);
@@ -27,6 +27,22 @@ router.post(
   }),
   projectController.addPost,
 );
+
+// GET "/project/edit/:id"
+router.get('/edit/:id', projectController.edit);
+
+// PUT "/project/edit/:id"
+router.put(
+  '/edit/:id',
+  ValidateFactory({
+    schema: projectValidator.projectSchema,
+    getObject: projectValidator.getProject,
+  }),
+  projectController.editPut,
+);
+
+// DELETE "/project/:id"
+router.delete('/:id', projectController.deleteProject);
 
 // Exporto este tramo de ruta
 export default router;
