@@ -4,7 +4,6 @@ import validator from 'validator';
 import crypto from 'crypto';
 import bcrypt from 'bcrypt';
 import uniqueValidator from 'mongoose-unique-validator';
-
 // 2.- Desestructurando la fn Schema
 const { Schema } = mongoose;
 // 3.- Creando el esquema
